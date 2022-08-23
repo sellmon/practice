@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Practice</title>
+    <link rel="stylesheet" href="output.css" />
+    <script
+      src="https://kit.fontawesome.com/5fc5cee3f4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body
+    class="grid grid-cols-1 p-8 font-mono bg-lime-100">
+
+  <!--Modal window/button-->
+    <div class="m-4">
+      <button
+        id="popup-btn"
+        class="bg-lime-300 w-48 text-center hover:bg-lime-400 p-4 px-6 border-black shadow-brutal-md text-sm font-bold"
+      >
+        Open popup
+      </button>
+    </div>
+  <!--Modal window/popup-->
+    <div
+      class="absolute hidden top-0 left-0 w-full h-screen outline-none flex z-10 bg-black/50 items-center overflow-y-auto"
+      id="my-modal"
+    >
+      <div
+        class="relative  flex flex-col mx-auto w-96 sm:w-[600px] z-10 gap-y-3 shadow-brutal-md p-10 bg-white border-4 border-black"
+      >
+        <span
+          id="span-close"
+          class="flex-auto absolute p-1 w-8 h-8 text-center rounded-full hover:bg-black/5 right-3 top-3 cursor-pointer"
+        >
+          <i class="fa-solid fa-xmark fa-xl"></i>
+        </span>
+        <h1 class="text-xl font-bold">Modal window</h1>
+        <p class="text-sm py-2">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cum
+          est ex, fugit incidunt maiores maxime nemo placeat provident quae
+          quisquam ratione recusandae repellendus temporibus vero, vitae
+          voluptates. Maxime, sed.
+        </p>
+        <img class="h-48 object-cover" src="https://images.unsplash.com/photo-1660912354875-0b24bf71d816?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80" alt="image">
+      </div>
+    </div>
+
+
+  <!--Tabs-->
+    <div class="m-4 shadow-brutal-md border-2 border-black" id="tabs">
+      <div
+        role="tablist"
+        aria-label="tabs"
+        class="gap-x-4 p-2 bg-white font-bold text-sm relative grid grid-cols-3 transition"
+      >
+        <div
+          class="absolute indicator h-10 w-32 my-auto top-0 bottom-0 left-0 bg-lime-300"
+        ></div>
+        <button
+          role="tab"
+          aria-selected="true"
+          aria-controls="panel-1"
+          id="tab-1"
+          tabindex="0"
+          class="relative block hover:bg-lime-300 h-10 px-6 tab"
+        >
+          <span class="text-gray-800">Tab 1</span>
+        </button>
+        <button
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-2"
+          id="tab-2"
+          tabindex="1"
+          class="relative block hover:bg-lime-300 h-10 px-6 tab"
+        >
+          <span class="text-gray-800">Tab 2</span>
+        </button>
+        <button
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-3"
+          id="tab-3"
+          tabindex="2"
+          class="relative block hover:bg-lime-300 h-10 px-6 tab"
+        >
+          <span class="text-gray-800">Tab 3</span>
+        </button>
+      </div>
+
+      <div class="flex flex-col relative h-auto bg-white text-sm">
+        <div role="tabpanel" class="tab-panel p-6 top-0 left-0" id="panel-1">
+          Ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi
+          dicta distinctio ex fuga incidunt, magnam minima modi necessitatibus
+          officia, officiis quam qui quibusdam reiciendis rerum soluta ullam ut
+          voluptatibus?
+        </div>
+        <div
+          role="tabpanel"
+          class="tab-panel top-0 left-0 hidden p-6"
+          id="panel-2"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nobis
+          omnis optio placeat ratione ut veniam. A atque deserunt earum
+          exercitationem in, magnam nihil numquam obcaecati tempora vel?
+          Nesciunt, saepe. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Assumenda aut culpa maxime modi neque provident quam ratione
+          repellat saepe tempore. Atque dolorum esse excepturi ipsa modi nostrum
+          officiis quam reiciendis?
+        </div>
+        <div
+          role="tabpanel"
+          class="tab-panel top-0 left-0 hidden p-6"
+          id="panel-3"
+        >
+          Ipsum dolor sit amet, consectetur adipisicing elit. Alias animi atque
+          aut debitis dolores, est ipsa iusto laborum libero necessitatibus
+          nihil ratione repellat! Eum qui sint tempora? Nobis, rerum vel.
+        </div>
+      </div>
+    </div>
+
+
+  <!--Menu-->
+    <div class="grid grid-cols-1 m-4 gap-y-6 relative">
+      <button
+        id="menu-btn"
+        class="bg-lime-300 w-24 text-left hover:bg-lime-400 p-4 px-6 border-black shadow-brutal-md font-bold"
+      >
+        Menu
+      </button>
+
+      <div
+        id="dropdown"
+        class="absolute top-20 w-48 hidden grid grid-cols-1 p-2 bg-lime-300 border-black shadow-brutal-md font-semibold"
+      >
+        <a href="#" class="px-4 py-2 hover:bg-lime-400 text-sm">Home</a>
+        <a href="#" class="px-4 py-2 hover:bg-lime-400 text-sm">About</a>
+        <a href="#" class="px-4 py-2 hover:bg-lime-400 text-sm">Contact</a>
+      </div>
+    </div>
+
+
+  <!--Selector-->
+    <div
+      class="grid grid-cols-1 pr-4 gap-y-6 m-4 font-mono text-2xl text-black font-bold border-4 border-black bg-white shadow-brutal-md"
+    >
+      <select
+        class="p-4 bg-white cursor-pointer"
+        name="Selector"
+        id="selector"
+        onchange="select()"
+      >
+        <option value="">Selector</option>
+        <option value="">Border radius</option>
+        <option value="">Menu</option>
+        <option value="">Tabs</option>
+        <option value="">Modal window</option>
+        <option value="">Animation</option>
+        <option value="">Slider</option>
+        <option value="">Filter</option>
+        <option value="">Calculator</option>
+        <option value="">Modal images</option>
+        <option value="">Progress bar</option>
+        <option value="">Popup</option>
+        <option value="">Accordions</option>
+        <option value="">Currency converter</option>
+        <option value="">To-do app</option>
+        <option value="">Toggles</option>
+      </select>
+    </div>
+
+
+  <!--Border radius-->
+    <div class="grid grid-cols-1 gap-y-6 p-4 font-mono">
+      <div
+        class="flex flex-col w-full gap-y-3 bg-lime-300 h-32 text-center place-content-center text-black font-bold shadow-brutal-md"
+        id="block"
+      >
+        👇 Change border radius 👇
+      </div>
+      <div class="flex flex-col w-full gap-y-6" id="block1">
+        <div class="grid grid-cols-2 gap-x-6">
+          <p
+            class="grid grid-cols-1 font-bold gap-x-4 border-4 border-neutral-900 p-4 gap-y-3 shadow-brutal-md"
+            oninput="border()"
+          >
+            Top left
+            <input type="range" id="rtl" min="0" max="100" step="2" value="0" />
+            <input
+              class="text-center px-2 py-1 w-12 bg-gray-900 text-white"
+              type="text"
+              id="ttl"
+              value="0"
+            />
+          </p>
+          <p
+            class="grid grid-cols-1 font-bold gap-x-4 border-4 border-neutral-900 p-4 gap-y-3 shadow-brutal-md"
+            oninput="border()"
+          >
+            Top right
+            <input type="range" id="rtr" min="0" max="100" step="2" value="0" />
+            <input
+              class="text-center px-2 py-1 w-12 bg-gray-900 text-white"
+              type="text"
+              id="ttr"
+              value="0"
+            />
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-x-6">
+          <p
+            class="grid grid-cols-1 font-bold gap-x-4 border-4 border-neutral-900 p-4 gap-y-3 shadow-brutal-md"
+            oninput="border()"
+          >
+            Bottom left
+            <input type="range" id="rbr" min="0" max="100" step="2" value="0" />
+            <input
+              class="text-center px-2 py-1 w-12 bg-gray-900 text-white"
+              type="text"
+              id="tbr"
+              value="0"
+            />
+          </p>
+          <p
+            class="grid grid-cols-1 font-bold gap-x-4 border-4 border-neutral-900 p-4 gap-y-3 shadow-brutal-md"
+            oninput="border()"
+          >
+            Bottom right
+            <input type="range" id="rbl" min="0" max="100" step="2" value="0" />
+            <input
+              class="text-center px-2 py-1 w-12 bg-gray-900 text-white"
+              type="text"
+              id="tbl"
+              value="0"
+            />
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
